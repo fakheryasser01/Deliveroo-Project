@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/deliveroo">
+        <classes>
+            <class name="pagesTest.CartTest">
+                <methods>
+                    <include name="test_Add_Item_ToCart_Successfully"/>
+                    <include name="test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
