@@ -12,14 +12,15 @@ Automated tests for the cart view
 ### Project Design:
 * Page Object Model (POM) design pattern (method chaining)
 * Singleton design pattern (webDriver)
-* A PagesBase class in *src/main/java/pageBase/PageBases.java* file path, that includes creation of the  webDriver and many wrapper methods in static classes which services as a core engine for the project 
+* A PagesBase class in *src/main/java/pageBase/PageBases.java* file path, that includes creation of the  webDriver and many wrapper methods which services as a core engine for the project 
+* Test Data from Enum in the *src/test/java* folder mainly in the *data* package instead of Data-driven excel/JSON because of the project size 
 * A screenShot for failure 
 * A Allure / emailable-report report After executing 
 
 
 ### How to run the project test cases :
 * Can find the test cases in the *src/test/java* folder mainly in the *pagesTest* package
-* Can find the test data  in the *src/test/java* folder mainly in the *data* package
+* Can find the testData  in the *src/test/java* folder mainly in the *data* package
 * Can find the TestBase in the *src/test/java* folder mainly in the *base* package
 * Can find the test suite for all the test cases in the *deliveroo* folder in the *testng.xml* file
 * To start the execution, please make sure that Maven and allure Report are setuped on the environment 

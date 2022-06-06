@@ -12,12 +12,13 @@ import org.openqa.selenium.support.ui.FluentWait;
 import java.time.Duration;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 public class PagesBase {
+
+    //singleton class
 
     private WebDriver driver;
 
+    //Singleton Implementation ----------------------------------------------------------
     private PagesBase() {
     }
 
@@ -35,6 +36,7 @@ public class PagesBase {
         return instance;
     }
 
+    // Driver Implementation --------------------------------------------------------
     public WebDriver getDriver() {
 
         WebDriverManager.chromedriver().setup();
@@ -45,6 +47,8 @@ public class PagesBase {
         return driver;
     }
 
+
+    //Common functions --------------------------------------------------------
 
     public void waitUntilAppearanceOf(By element) {
         FluentWait wait = new FluentWait(driver)
@@ -62,9 +66,6 @@ public class PagesBase {
         driver.findElement(element).click();
     }
 
-
-
-
     public void enterData(By element, String value) {
         waitUntilAppearanceOf(element);
         driver.findElement(element).clear();
@@ -77,23 +78,6 @@ public class PagesBase {
         System.out.println("The element Text : " + driver.findElement(element).getText());
         return driver.findElement(element).getText();
     }
-
-
-    public List<String> listOf(By element) {
-        waitUntilAppearanceOf(element);
-        List<WebElement> menuItems = driver.findElements(element);
-
-//        (menuItems.size() != 0, "List is empty, failed to collect");
-
-        menuItems.stream()
-                .map(WebElement::getText).
-                forEach(s -> System.out.println(s));
-
-        return menuItems.stream()
-                .map(WebElement::getText)
-                .collect(toList());
-    }
-
 
     public void clickOnSpecific(By element, String searchText) {
         waitUntilAppearanceOf(element);

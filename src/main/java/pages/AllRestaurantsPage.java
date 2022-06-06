@@ -5,6 +5,7 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 import pageBase.PagesBase;
 
 public class AllRestaurantsPage {
+
     PagesBase pagesBase = PagesBase.getInstance();
 
 
