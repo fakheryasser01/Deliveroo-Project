@@ -1,19 +1,21 @@
 
 # Deliveroo Automation Project
 
-Automated tests for the cart view
+Automated tests for the Deliveroo's cart 
 
 ### The main Frameworks included in the project:
-* Selenium Webdriver
+* Selenium WebDriver
 * TestNG
 * Maven
+* WebDriver Manager 
+* json-simple
 * Allure Report
 
 ### Project Design:
 * Page Object Model (POM) design pattern (method chaining)
 * Singleton design pattern (webDriver)
-* A PagesBase class in *src/main/java/pageBase/PageBases.java* file path, that includes creation of the  webDriver and many wrapper methods which services as a core engine for the project 
-* Test Data from Enum in the *src/test/java* folder mainly in the *data* package instead of Data-driven excel/JSON because of the project size 
+* A PageBase class in *src/main/java/frameworkBase/PageBases.java* file path, that includes creation of the  webDriver and many wrapper methods which services as a core engine for the project 
+* Data Driven framework (JSON)
 * A screenShot for failure 
 * A Allure / emailable-report report After executing 
 

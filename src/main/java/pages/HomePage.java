@@ -1,29 +1,29 @@
 package pages;
 
+import frameworkBase.PageBase;
 import org.openqa.selenium.By;
-import pageBase.PagesBase;
 
 public class HomePage {
-    PagesBase pagesBase = PagesBase.getInstance();
+    PageBase pageBase = PageBase.getInstance();
 
 
     private By locationSearchField = By.id("location-search");
-    private  By searchResultsItems = By.className("ccl-329f91fe3811b3d9");
-    private  By cookies = By.id("onetrust-accept-btn-handler");
+    private By searchResultsItems = By.className("ccl-329f91fe3811b3d9");
+    private By cookies = By.id("onetrust-accept-btn-handler");
 
 
     public HomePage clickOnAcceptCookiesBtn() {
-        pagesBase.clickOn(cookies);
+        pageBase.clickOn(cookies);
         return this;
     }
 
-    public HomePage setDeliveryAddress(Enum a) {
-        pagesBase.enterData(locationSearchField, a.toString());
+    public HomePage setDeliveryAddress(String a) {
+        pageBase.enterData(locationSearchField, a);
         return this;
     }
 
-    public HomePage clickOnSearchResultByCountry(Enum country) {
-        pagesBase.clickOnSpecific(searchResultsItems, country.toString());
+    public HomePage clickOnSearchResultByCountry(String country) {
+        pageBase.clickOnSpecific(searchResultsItems, country);
         return this;
     }
 

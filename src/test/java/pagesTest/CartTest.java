@@ -4,17 +4,19 @@ import base.TestBase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static data.TestData.*;
+import java.io.IOException;
+
 
 public class CartTest extends TestBase {
-    String itemName;
-    int itemCount;
 
+    String productName;
+    int productCount;
 
-    /*
+    /* TC01
     1.	Open Deliveroo web App Using https://deliveroo.co.uk/
     2.	Click On Accept all Cookies
     3.	Enter the “delivery address” in search field and select location from the drop-down menu using “State/Country” .
@@ -28,17 +30,17 @@ public class CartTest extends TestBase {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("TC01 - The guest user should be able to add item to the cart successfully")
-    public void test_Add_Item_ToCart_Successfully() {
+    public void test_Add_Item_ToCart_Successfully() throws IOException, ParseException {
 
         openItemDetails();
         restaurantPage.clickOnAddItem();
-        Assert.assertTrue(restaurantPage.getItemNameFromCard().contains(itemName));
-        Assert.assertEquals(restaurantPage.getItemCountFromCard(), itemCount);
+        Assert.assertTrue(restaurantPage.getItemNameFromCard().contains(productName));
+        Assert.assertEquals(restaurantPage.getItemCountFromCard(), productCount);
 
     }
 
 
-    /*
+    /* TC04
     1.	Open Deliveroo web App Using https://deliveroo.co.uk/
     2.	Click On Accept all Cookies
     3.	Enter the “delivery address” in search field and select location from the drop-down menu using “State/Country” .
@@ -50,36 +52,37 @@ public class CartTest extends TestBase {
      */
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @Description("The Guest user should be able to see the cart’s empty view when “remove/decrease " +
+    @Description("TC04 - The Guest user should be able to see the cart’s empty view when “remove/decrease " +
             "the last item’s count till be zero” the from the cart")
-    public void test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem() {
+    public void test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem() throws IOException, ParseException {
 
         openItemDetails();
         restaurantPage.clickOnAddItem();
-        Assert.assertTrue(restaurantPage.getItemNameFromCard().contains(itemName));
-        Assert.assertEquals(restaurantPage.getItemCountFromCard(), itemCount);
+        Assert.assertTrue(restaurantPage.getItemNameFromCard().contains(productName));
+        Assert.assertEquals(restaurantPage.getItemCountFromCard(), productCount);
         restaurantPage.clickOnDecreaseItemCount();
-        Assert.assertTrue(restaurantPage.geEmptyCartTxt().contains(EmptyBasket.toString()));
+        Assert.assertTrue(restaurantPage.geEmptyCartTxt().contains(jsonReader.EmptyBasket));
 
 
     }
 
 
-    private void openItemDetails() {
+    private void openItemDetails() throws IOException, ParseException {
+        jsonReader.JsonReader();
         homePage.clickOnAcceptCookiesBtn()
-                .setDeliveryAddress(DeliveryAddress)
-                .clickOnSearchResultByCountry(CountryOfAddress);
+                .setDeliveryAddress(jsonReader.DeliveryAddress)
+                .clickOnSearchResultByCountry(jsonReader.CountryOfAddress);
 
         allRestaurantsPage
                 .clickOnOfferOkBtn()
-                .searchOnRestaurantByName(RestaurantName)
+                .searchOnRestaurantByName(jsonReader.RestaurantName)
                 .selectTheRestaurant();
 
-        restaurantPage.clickOnMenuSection(Burgers)
-                .selectSpecificItemFromMenu(ProductName);
+        restaurantPage.clickOnMenuSection(jsonReader.Burgers)
+                .selectSpecificItemFromMenu(jsonReader.ProductName);
 
-        itemName = restaurantPage.getItemName();
-        itemCount = restaurantPage.getItemCount();
+        productName = restaurantPage.getItemName();
+        productCount = restaurantPage.getItemCount();
     }
 
 }

@@ -1,0 +1,4 @@
+pages\AllRestaurantsPage.class
+pages\RestaurantPage.class
+frameworkBase\PageBase.class
+pages\HomePage.class

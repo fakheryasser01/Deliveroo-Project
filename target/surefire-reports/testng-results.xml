@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="44332" started-at="2022-06-07T03:41:01 EET" finished-at="2022-06-07T03:41:45 EET">
+    <groups>
+    </groups>
+    <test name="E:/deliveroo" duration-ms="44332" started-at="2022-06-07T03:41:01 EET" finished-at="2022-06-07T03:41:45 EET">
+      <class name="pagesTest.CartTest">
+        <test-method status="PASS" signature="setupDriver()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="setupDriver" is-config="true" duration-ms="3021" started-at="2022-06-07T03:41:01 EET" finished-at="2022-06-07T03:41:04 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method status="PASS" signature="setupApp()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="setupApp" is-config="true" duration-ms="1912" started-at="2022-06-07T03:41:04 EET" finished-at="2022-06-07T03:41:06 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApp -->
+        <test-method status="PASS" signature="test_Add_Item_ToCart_Successfully()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="test_Add_Item_ToCart_Successfully" duration-ms="18926" started-at="2022-06-07T03:41:06 EET" finished-at="2022-06-07T03:41:25 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Add_Item_ToCart_Successfully -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="recordFailure" is-config="true" duration-ms="1" started-at="2022-06-07T03:41:25 EET" finished-at="2022-06-07T03:41:25 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_Add_Item_ToCart_Successfully status=SUCCESS method=CartTest.test_Add_Item_ToCart_Successfully()[pri:0, instance:pagesTest.CartTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method status="PASS" signature="setupApp()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="setupApp" is-config="true" duration-ms="1347" started-at="2022-06-07T03:41:25 EET" finished-at="2022-06-07T03:41:26 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApp -->
+        <test-method status="PASS" signature="test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem" duration-ms="18226" started-at="2022-06-07T03:41:26 EET" finished-at="2022-06-07T03:41:44 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="recordFailure" is-config="true" duration-ms="0" started-at="2022-06-07T03:41:44 EET" finished-at="2022-06-07T03:41:44 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem status=SUCCESS method=CartTest.test_AppearanceOf_Cart_EmptyView_Successfully_After_Remove_LastItem()[pri:0, instance:pagesTest.CartTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:pagesTest.CartTest@4c309d4d]" name="tearDown" is-config="true" duration-ms="745" started-at="2022-06-07T03:41:44 EET" finished-at="2022-06-07T03:41:45 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pagesTest.CartTest -->
+    </test> <!-- E:/deliveroo -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

@@ -1,0 +1,4 @@
+# Created at 2022-06-07T03:41:00.209
+Boot Manifest-JAR contains absolute paths in classpath 'E:\deliveroo\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
