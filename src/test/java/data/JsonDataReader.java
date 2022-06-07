@@ -15,7 +15,7 @@ public class JsonDataReader {
 
     public void JsonReader() throws IOException, ParseException {
 
-        String filePath = System.getProperty("user.dir") + "/src/test/java/data/UserData.Json";
+        String filePath = System.getProperty("user.dir") + "/src/test/java/data/TestData.Json";
 
         JSONParser parser = new JSONParser();
         File srcFile = new File(filePath);
